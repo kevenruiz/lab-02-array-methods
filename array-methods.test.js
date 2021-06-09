@@ -1,3 +1,4 @@
+/* eslint-disable keyword-spacing */
 import { map } from './array-methods.js';
 import { filter } from './array-methods.js';
 
@@ -23,7 +24,7 @@ describe('filter', () => {
 
 
 
-    expect(result).toEqual('exuberant', 'destruction', 'present');
+    expect(result).toEqual(['exuberant', 'destruction', 'present']);
 
 
 
