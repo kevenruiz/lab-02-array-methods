@@ -20,7 +20,7 @@ describe('filter', () => {
   it('Takes an Array and callback of signature item => {} and creates new array', () => {
     const wordsArray = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-    const result = wordsArray.filter(item => { if (item.length > 6) return item; });
+    const result = filter(wordsArray, item => { if (item.length > 6) return item; });
 
 
 
