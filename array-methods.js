@@ -15,22 +15,20 @@ export function map(arr, callback) {
 
 
 
-export function filter(arr, callback) {
 
-  const newArray = [];
-  let y = 0;
+export function filter(arr, callback) {
+  const newArr = [];
+  let newArrIndex = 0;
 
   for (let i = 0; i < arr.length; i++) {
-
-    if ((arr) && (callback(arr[i]))) {
-
-      newArray[y] = callback(arr[i]);
-      y++;
-
+    if (callback(arr[i])) {
+      newArr[newArrIndex] = callback(arr[i]);
+      newArrIndex++;
     }
-
   }
+  return newArr;
 
-  return newArray;
 
+  //for each item in array
+  // do stuff
 }
