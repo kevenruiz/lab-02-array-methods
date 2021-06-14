@@ -18,14 +18,17 @@ export function map(arr, callback) {
 
 export function filter(arr, callback) {
   const newArr = [];
-  const y = 0;
+  let newArrIndex = 0;
+
   for (let i = 0; i < arr.length; i++) {
-    newArr[i] = callback(arr[i]);
-    y++;
-
+    if (callback(arr[i])) {
+      newArr[newArrIndex] = callback(arr[i]);
+      newArrIndex++;
+    }
   }
-
   return newArr;
+
+
   //for each item in array
   // do stuff
 }

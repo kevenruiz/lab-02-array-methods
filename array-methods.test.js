@@ -20,11 +20,11 @@ describe('filter', () => {
   it('Takes an Array and callback of signature item => {} and creates new array', () => {
     const wordsArray = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
-    const result = filter(wordsArray, item => { if (item.length > 6) return item; });
+    const filteredArray = filter(wordsArray, item => { if (item.length > 6) return item; });
 
 
 
-    expect(result).toEqual(['exuberant', 'destruction', 'present']);
+    expect(filteredArray).toEqual(['exuberant', 'destruction', 'present']);
 
 
 
