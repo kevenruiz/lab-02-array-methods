@@ -31,3 +31,13 @@ export function findIndex(arr, callback) {
       return i;
   }
 }
+
+export function reduce(arr, callback, initialValue) {
+  let acc = initialValue === undefined ? 0 : initialValue;
+  for (let i = 0; i < arr.length; i++) {
+
+    acc += callback(arr[i]);
+
+  }
+  return acc;
+}

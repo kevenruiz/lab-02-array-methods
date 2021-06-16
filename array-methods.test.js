@@ -1,5 +1,5 @@
 /* eslint-disable keyword-spacing */
-import { map, filter, findIndex } from './array-methods.js';
+import { map, filter, findIndex, reduce } from './array-methods.js';
 
 
 
@@ -40,3 +40,13 @@ describe('findIndex(arr, callback)', () => {
   });
 
 });
+
+describe(' testing the reduce(arr, callback, initalValue) func', () => {
+  test('testing if the acc return', () => {
+    const array = [1, 3, 6, 10];
+    const newArray = reduce(array, (num) => { return num; }, 0);
+    expect(newArray).toEqual(20);
+  });
+
+});
+
