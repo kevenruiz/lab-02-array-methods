@@ -1,6 +1,6 @@
 /* eslint-disable keyword-spacing */
-import { map } from './array-methods.js';
-import { filter } from './array-methods.js';
+import { map, filter, findIndex, reduce } from './array-methods.js';
+
 
 
 describe('map', () => {
@@ -30,3 +30,23 @@ describe('filter', () => {
 
   });
 });
+
+describe('findIndex(arr, callback)', () => {
+  test('returns index of array based on true callback', () => {
+    const firstArray = [0, 1, 2, 3];
+
+    const newArray = findIndex(firstArray, (numBooger) => { return numBooger === 2; });
+    expect(newArray).toEqual(2);
+  });
+
+});
+
+describe(' testing the reduce(arr, callback, initalValue) func', () => {
+  test('testing if the acc return', () => {
+    const array = [1, 3, 6, 10];
+    const newArray = reduce(array, (num) => { return num; }, 0);
+    expect(newArray).toEqual(20);
+  });
+
+});
+
