@@ -11,11 +11,6 @@ export function map(arr, callback) {
   // do stuff
 }
 
-
-
-
-
-
 export function filter(arr, callback) {
   const newArr = [];
   let newArrIndex = 0;
@@ -28,7 +23,11 @@ export function filter(arr, callback) {
   }
   return newArr;
 
+}
 
-  //for each item in array
-  // do stuff
+export function findIndex(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i]))
+      return i;
+  }
 }
